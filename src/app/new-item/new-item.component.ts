@@ -23,7 +23,10 @@ export class NewItemComponent implements OnInit {
   save(): void {
     this.itemService.save(this.item)
       .subscribe(
-      result => { this.itemObservable.newItemAdded(result) },
+      result => {
+        this.itemObservable.newItemAdded(result);
+        this.item = new Item();
+      },
       error => { }
       );
   }
