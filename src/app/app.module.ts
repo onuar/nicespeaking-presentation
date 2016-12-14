@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { NewItemComponent } from './new-item/new-item.component';
 import { ListItemComponent } from './list-item/list-item.component';
 
+import { ItemService } from './services/item.service';
+import { ItemObservable } from './Observables/item-observable';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,7 @@ import { ListItemComponent } from './list-item/list-item.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ItemService, ItemObservable],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

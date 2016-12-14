@@ -1,3 +1,6 @@
-<p>
-  list-item works!
-</p>
+<div *ngFor="let item of list">
+  <div class="table table-hover table-bordered">
+    <div>{{item.tr}}</div>
+    <div>{{item.en}}</div>
+  </div>
+</div>

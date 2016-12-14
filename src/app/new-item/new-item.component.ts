@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Item } from '../models/Item'
+import { ItemService } from '../services/item.service';
+import { ItemObservable } from '../Observables/item-observable';
 
 @Component({
   selector: 'app-new-item',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-item.component.css']
 })
 export class NewItemComponent implements OnInit {
+  item: Item;
 
-  constructor() { }
+  constructor(
+    private itemService: ItemService,
+    private itemObservable: ItemObservable
+  ) { }
 
   ngOnInit() {
+    this.item = new Item();
   }
 
+  save(): void {
+    this.itemService.save(this.item)
+      .subscribe(
+      result => { this.itemObservable.newItemAdded(result) },
+      error => { }
+      );
+  }
 }
