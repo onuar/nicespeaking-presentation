@@ -1,6 +1,13 @@
-<div>
-  <input [(ngModel)]="item.tr" class="form-control" placeholder="tr">
-  <input [(ngModel)]="item.en" class="form-control" placeholder="en">
+<h4>kucuk inputlar basligi</h4>
 
-  <button (click)="save(item)" class="btn btn-primary">Save</button>
+<div class="form-group">
+  <textarea rows="3" [(ngModel)]="item.tr" class="form-control" placeholder="tr"></textarea>
+</div>
+
+<div class="form-group">
+  <textarea rows="3" [(ngModel)]="item.en" class="form-control" placeholder="en"></textarea>
+</div>
+
+<div class="form-group">
+  <button (click)="save(item)" class="btn btn-info pull-right">Save</button>
 </div>
