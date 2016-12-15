@@ -13,8 +13,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ItemService {
 
-  // private apiUrl = 'https://nicespeaking-api.herokuapp.com/api';
-  private apiUrl = 'http://127.0.0.1:5000/api';
+  private apiUrl = 'https://nicespeaking-api.herokuapp.com/api';
+  //private apiUrl = 'http://127.0.0.1:5000/api';
 
   constructor(
     private http: Http

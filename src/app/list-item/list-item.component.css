@@ -1,0 +1,12 @@
+.list-group-item label {
+    display:inline-block;
+    margin-right:4px;
+    width:25px;
+}
+
+@media screen and (min-width:1200px){
+.list-group{
+    overflow-y: auto;
+    height: 666px;
+}
+}
